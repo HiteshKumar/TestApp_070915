@@ -334,7 +334,7 @@
 
             });
         </script>
-       
+      
         <div class="pageh">
             <div class="pageh_left">
                 <img src="images/logo.png" width="33" height="30" />
@@ -619,34 +619,34 @@
 
     <!-- Start of the Summit Agenda -->
     <div data-role="page" id="page9">
-         <script type="text/javascript">
-             $(document).ready(function () {
-                 var xJsonData = "[]";
-                 var jsonList = "Aganda.json";
-                 $.getJSON(jsonList, function (r) {
-                     xJsonData = r.data;
-                     console.log(r.data);
-                     var items = [];
-                     var block = "<div>";
-                     $.each(xJsonData, function (index, item) {
-                         //alert(data.data[i].archive_id);
-                         //console.log(data.data[i].title2);
-                         //alert(item.archive_id);
-                         var row = "<div class='press-release'>";
-                         row += "<h1 style='display: block; text-align: left; width: 100%; font-size: 22px;'><b>" + item.schedule_name + "</b></h1>";
-                         row += "<div style='display: block; text-align: left; width: 100%;'>";
-                         row += "<img src='images/press_icon.png' style='display: inline-block;' /><div style='display: inline-block; font-size: 18px; margin-left:10px;'>" + item.time + "</div>";
-                         row += "</div>";
-                         row += "<a href='location1.html'> <p class='lead-font'>" + item.location + "</p></a>";
-                         row += "</div>";
-                         block += row;
-                     });
-                     block += '</div>';
-                     $('#dvSummitAgenda').html(block);
-                     $("#dvSummitAgenda").slideDown("slow");
+          <script type="text/javascript">
+              $(document).ready(function () {
+                  var xJsonData = "[]";
+                  var jsonList = "Aganda.json";
+                  $.getJSON(jsonList, function (r) {
+                      xJsonData = r.data;
+                      console.log(r.data);
+                      var items = [];
+                      var block = "<div>";
+                      $.each(xJsonData, function (index, item) {
+                          //alert(data.data[i].archive_id);
+                          //console.log(data.data[i].title2);
+                          //alert(item.archive_id);
+                          var row = "<div class='press-release'>";
+                          row += "<h1 style='display: block; text-align: left; width: 100%; font-size: 22px;'><b>" + item.schedule_name + "</b></h1>";
+                          row += "<div style='display: block; text-align: left; width: 100%;'>";
+                          row += "<img src='images/press_icon.png' style='display: inline-block;' /><div style='display: inline-block; font-size: 18px; margin-left:10px;'>" + item.time + "</div>";
+                          row += "</div>";
+                          row += "<a href='location1.html'> <p class='lead-font'>" + item.location + "</p></a>";
+                          row += "</div>";
+                          block += row;
+                      });
+                      block += '</div>';
+                      $('#dvSummitAgenda').html(block);
+                      $("#dvSummitAgenda").slideDown("slow");
 
-                 });
-             });
+                  });
+              });
         </script>
         <div class="pageh">
             <div class="pageh_left">
